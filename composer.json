@@ -1,5 +1,5 @@
 {
-    "name": "pamenary/laravelSms",
+    "name": "pamenary/laravel-sms",
     "description": "package for send sms with laravel (All gatways in Iran)",
     "license": "MIT",
     "authors": [
