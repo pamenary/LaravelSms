@@ -1,33 +1,20 @@
 {
-    "name": "teepluss/theme",
-    "description": "Theme will help you organize your themes inside Laravel projects easily and maintain its related assets, layouts and partials for the theme in single directory.",
-    "keywords": ["laravel", "theme", "layout", "asset", "widget", "twig"],
-    "homepage": "https://github.com/teepluss/laravel-theme",
-    "type": "library",
+    "name": "pamenary/laravelSms",
+    "description": "package for send sms with laravel (All gatways in Iran)",
     "license": "MIT",
     "authors": [
         {
-            "name": "Teepluss",
-            "email": "admin@laravel.in.th"
+            "name": "ali pamenari",
+            "email": "info@azinweb.com"
         }
     ],
+    "minimum-stability": "stable",
     "require": {
-        "php": ">=5.4.0",
-        "twig/twig": "1.x"
-    },
-    "require-dev": {
-        "illuminate/support": ">=5.0.1"
+        "php": ">=5.4.0"
     },
     "autoload": {
         "psr-4": {
-            "Teepluss\\Theme\\": "src/"
-        },
-        "classmap": [
-            "src/Exceptions.php"
-        ],
-        "files": [
-            "src/helpers.php"
-        ]
-    },
-    "minimum-stability": "dev"
+            "Pamenary\\LaravelSms\\": "src/"
+        }
+    }
 }
