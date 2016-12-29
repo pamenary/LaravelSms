@@ -55,7 +55,7 @@ Sms::getCredit();
 ```
 
 ### Gateway
-https://azinweb.com/ __
+https://azinweb.com/__
 http://arad-sms.ir __
 http://ariaideh.com __
 http://www.0098sms.com __
