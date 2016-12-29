@@ -54,3 +54,34 @@ $sms->sendSMS(['09136000415'], 'text message');
 Sms::getCredit();
 ```
 
+### Gateway
+https://azinweb.com/
+http://arad-sms.ir
+http://ariaideh.com
+http://www.0098sms.com
+http://500sms.ir
+http://adpdigital.com/services
+http://afe.ir
+http://www.afilnet.com
+http://sms.amansoft.ir
+http://www.arkapayamak.ir
+http://asanak.ir
+http://asanak.ir
+http://barzingostar.ir
+http://www.bearsms.com
+http://panelsms.bestit.co
+http://bulutfon.com
+http://caffeweb.com
+http://chapargah.ir
+http://chaparpanel.ir
+http://csmsplus.mobilinkworld.com
+http://sms.dot4all.it
+http://esms24.ir
+http://smspanel.faraed.com
+http://www.farapayamak.com
+http://farazpayam.com
+http://fayasms.ir
+http://firstpayamak.ir
+http://fortytwo.com
+http://freepayamak.ir
+http://sms.hostiran.net
