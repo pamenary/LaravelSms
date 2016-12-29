@@ -10,14 +10,15 @@ namespace Pamenary\LaravelSms\Gateways;
 
 
 interface GatewayInterface {
+
 	/**
-	 * @param $to
-	 * @param $text
-	 * @param $isflash
+	 * @param array $numbers
+	 * @param       $text
+	 * @param bool  $isflash
 	 *
-	 * @return object
+	 * @return mixed
 	 */
-	public function sendSMS($to, $text, $isflash = false);
+	public function sendSMS(array $numbers, $text, $isflash = false);
 
 	/**
 	 * @return int

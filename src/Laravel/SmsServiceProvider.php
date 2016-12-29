@@ -3,6 +3,7 @@
 namespace Pamenary\LaravelSms\Laravel;
 
 use Pamenary\LaravelSms\Gateways\AzinwebGateway;
+use Pamenary\LaravelSms\Gateways\GatewayAbstract;
 use Illuminate\Support\ServiceProvider;
 use Pamenary\LaravelSms\Sms;
 
@@ -33,18 +34,7 @@ class SmsServiceProvider extends ServiceProvider
 	    );
 
 		$this->app->singleton('Sms', function(){
-			$gateway = config('sms.default', 'default');
-			switch ($gateway)
-			{
-				case 'azinweb':
-					$gateway = new AzinwebGateway();
-					break;
-				default:
-					$gateway = new AzinwebGateway();
-					break;
-			}
-
-			return new Sms($gateway);
+			return new Sms();
 		});
     }
 }

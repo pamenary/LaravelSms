@@ -8,17 +8,17 @@ namespace Pamenary\LaravelSms\Gateways;
  * Date: 12/23/2016
  * Time: 12:51 PM
  */
-class AzinwebGateway extends GatewayAbstract {
+class AmansoftGateway extends GatewayAbstract {
 
 	/**
-	 * AzinwebGateway constructor.
+	 * AmansoftGateway constructor.
 	 */
 	public function __construct() {
 
-		$this->webService  = config('sms.gateway.azinweb.webService');
-		$this->username    = config('sms.gateway.azinweb.username');
-		$this->password    = config('sms.gateway.azinweb.password');
-		$this->from        = config('sms.gateway.azinweb.from');
+		$this->webService  = config('sms.gateway.amansoft.webService');
+		$this->username    = config('sms.gateway.amansoft.username');
+		$this->password    = config('sms.gateway.amansoft.password');
+		$this->from        = config('sms.gateway.amansoft.from');
 	}
 
 
@@ -31,20 +31,22 @@ class AzinwebGateway extends GatewayAbstract {
 	 * @internal param $to | array
 	 */
 	public function sendSMS( array $numbers, $text, $isflash = false ) {
-		// Check credit for the gateway
-		if(!$this->GetCredit()) return;
 		try {
+			// Check credit for the gateway
+			if ( ! $this->GetCredit() ) {
+				return false;
+			}
 			$client = new \SoapClient( $this->webService );
 			$result = $client->SendSms(
-				[
-					'username' => $this->username,
-					'password' => $this->password,
-					'from'     => $this->from,
-					'to'       => $numbers,
-					'text'     => $text,
-					'flash'    => $isflash,
-					'udh'      => '',
-				]
+				array(
+					'username'	=> $this->username,
+					'password'	=> $this->password,
+					'from'		=> $this->from,
+					'to'		=> $numbers,
+					'text'		=> $text,
+					'flash'		=> $isflash,
+					'udh'		=> ''
+				)
 			);
 
 			return $result;
@@ -63,10 +65,9 @@ class AzinwebGateway extends GatewayAbstract {
 		try {
 			$client = new \SoapClient( $this->webService );
 
-			return $client->Credit( [
-				                        "username" => $this->username,
-				                        "password" => $this->password,
-			                        ] )->CreditResult;
+			$result = $client->Credit(array('username' => $this->username, 'password' => $this->password));
+
+			return $result->CreditResult;
 		} catch( SoapFault $ex ) {
 			echo $ex->faultstring;
 		}

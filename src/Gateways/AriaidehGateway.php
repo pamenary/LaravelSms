@@ -1,24 +1,23 @@
 <?php
-
-namespace Pamenary\LaravelSms\Gateways;
-
 /**
  * Created by PhpStorm.
  * User: Ali
  * Date: 12/23/2016
- * Time: 12:51 PM
+ * Time: 5:51 PM
  */
-class AzinwebGateway extends GatewayAbstract {
 
+namespace Pamenary\LaravelSms\Gateways;
+
+
+class AriaidehGateway extends GatewayAbstract{
 	/**
-	 * AzinwebGateway constructor.
+	 * AriaidehGateway constructor.
 	 */
 	public function __construct() {
-
-		$this->webService  = config('sms.gateway.azinweb.webService');
-		$this->username    = config('sms.gateway.azinweb.username');
-		$this->password    = config('sms.gateway.azinweb.password');
-		$this->from        = config('sms.gateway.azinweb.from');
+		$this->webService  = config('sms.gateway.ariaideh.webService');
+		$this->username    = config('sms.gateway.ariaideh.username');
+		$this->password    = config('sms.gateway.ariaideh.password');
+		$this->from        = config('sms.gateway.ariaideh.from');
 	}
 
 
@@ -27,13 +26,14 @@ class AzinwebGateway extends GatewayAbstract {
 	 * @param       $text
 	 * @param bool  $isflash
 	 *
-	 * @return mixed
-	 * @internal param $to | array
+	 * @return bool
 	 */
 	public function sendSMS( array $numbers, $text, $isflash = false ) {
-		// Check credit for the gateway
-		if(!$this->GetCredit()) return;
 		try {
+			// Check credit for the gateway
+			if ( ! $this->GetCredit() ) {
+				return false;
+			}
 			$client = new \SoapClient( $this->webService );
 			$result = $client->SendSms(
 				[
@@ -53,13 +53,10 @@ class AzinwebGateway extends GatewayAbstract {
 		}
 	}
 
-
 	/**
 	 * @return mixed
 	 */
 	public function getCredit() {
-		if(!$this->username and !$this->password)
-			return 'Blank Username && Password';
 		try {
 			$client = new \SoapClient( $this->webService );
 

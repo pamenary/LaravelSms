@@ -8,17 +8,17 @@ namespace Pamenary\LaravelSms\Gateways;
  * Date: 12/23/2016
  * Time: 12:51 PM
  */
-class AzinwebGateway extends GatewayAbstract {
+class FarazpayamGateway extends GatewayAbstract {
 
 	/**
-	 * AzinwebGateway constructor.
+	 * FarazpayamGateway constructor.
 	 */
 	public function __construct() {
 
-		$this->webService  = config('sms.gateway.azinweb.webService');
-		$this->username    = config('sms.gateway.azinweb.username');
-		$this->password    = config('sms.gateway.azinweb.password');
-		$this->from        = config('sms.gateway.azinweb.from');
+		$this->webService  = config('sms.gateway.farazpayam.webService');
+		$this->username    = config('sms.gateway.farazpayam.username');
+		$this->password    = config('sms.gateway.farazpayam.password');
+		$this->from        = config('sms.gateway.farazpayam.from');
 	}
 
 
@@ -36,18 +36,20 @@ class AzinwebGateway extends GatewayAbstract {
 		try {
 			$client = new \SoapClient( $this->webService );
 			$result = $client->SendSms(
-				[
-					'username' => $this->username,
-					'password' => $this->password,
-					'from'     => $this->from,
-					'to'       => $numbers,
-					'text'     => $text,
-					'flash'    => $isflash,
-					'udh'      => '',
-				]
+				array(
+					'username'	=> $this->username,
+					'password'	=> $this->password,
+					'from'		=> $this->from,
+					'to'		=> $numbers,
+					'text'		=> $text,
+					'flash'		=> $isflash,
+					'udh'		=> ''
+				)
 			);
 
-			return $result;
+			if($result) {
+				return $result;
+			}
 		} catch( SoapFault $ex ) {
 			echo $ex->faultstring;
 		}
@@ -63,10 +65,8 @@ class AzinwebGateway extends GatewayAbstract {
 		try {
 			$client = new \SoapClient( $this->webService );
 
-			return $client->Credit( [
-				                        "username" => $this->username,
-				                        "password" => $this->password,
-			                        ] )->CreditResult;
+			$result = $client->Credit(array('username' => $this->username, 'password' => $this->password));
+			return $result->CreditResult;
 		} catch( SoapFault $ex ) {
 			echo $ex->faultstring;
 		}

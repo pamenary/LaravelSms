@@ -2,16 +2,13 @@
 
 namespace Pamenary\LaravelSms;
 
+use Pamenary\LaravelSms\Gateways\GatewayAbstract;
 use Pamenary\LaravelSms\Gateways\GatewayInterface;
 use Pamenary\LaravelSms\Gateways\AzinwebGateway;
 
-class Sms
+class Sms extends GatewayAbstract
 {
 	private $gateway;
-	private $username;
-	private $password;
-	private $from;
-
 
 	/**
 	 * Sms constructor.
@@ -21,29 +18,23 @@ class Sms
 	public function __construct(GatewayInterface $gateway = null) {
 		ini_set("soap.wsdl_cache_enabled", "0");
 		$defaultGateway = config('sms.default');
-
-		$Gateways = config('sms.gateway');
+		$this->gateway = $gateway;
 
 		if (is_null($gateway)) {
-			$gateway = new AzinwebGateway();
-
+			$this->gateway = $this->initGateway( $defaultGateway );
 		}
-		$this->gateway  = $gateway;
-		$this->gateway->webService  = $Gateways[$defaultGateway]['webService'];
-		$this->gateway->username    = $Gateways[$defaultGateway]['username'];
-		$this->gateway->password    = $Gateways[$defaultGateway]['password'];
-		$this->gateway->from        = $Gateways[$defaultGateway]['from'];
 	}
 
+
 	/**
-	 * @param      $to
-	 * @param      $text
-	 * @param bool $isflash
+	 * @param array $numbers
+	 * @param       $text
+	 * @param bool  $isflash
 	 *
-	 * @return mixed|object
+	 * @return mixed
 	 */
-	public function sendSMS( $to, $text, $isflash = false ) {
-		return $this->gateway->sendSMS($to, $text, $isflash);
+	public function sendSMS( array $numbers, $text, $isflash = false ) {
+		return $this->gateway->sendSMS($numbers, $text, $isflash);
 	}
 
 	/**
@@ -53,5 +44,6 @@ class Sms
 
 		return $this->gateway->getCredit();
 	}
+
 
 }
