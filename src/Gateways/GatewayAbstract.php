@@ -111,6 +111,9 @@ abstract class GatewayAbstract implements GatewayInterface {
 			case 'freepayamak':
 				$gateway = new FreepayamakGateway();
 				break;
+			case 'hostiran':
+				$gateway = new HostiranGateway();
+				break;
 			default:
 				$gateway = new AzinwebGateway();
 				break;
