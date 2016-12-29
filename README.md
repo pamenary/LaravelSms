@@ -55,33 +55,33 @@ Sms::getCredit();
 ```
 
 ### Gateway
-https://azinweb.com/__
-http://arad-sms.ir __
-http://ariaideh.com __
-http://www.0098sms.com __
-http://500sms.ir __
-http://adpdigital.com/services __
-http://afe.ir __
-http://www.afilnet.com __
-http://sms.amansoft.ir __
-http://www.arkapayamak.ir __
-http://asanak.ir __
-http://asanak.ir __
-http://barzingostar.ir __
-http://www.bearsms.com __
-http://panelsms.bestit.co __
-http://bulutfon.com __
-http://caffeweb.com __
-http://chapargah.ir __
-http://chaparpanel.ir __
-http://csmsplus.mobilinkworld.com __
-http://sms.dot4all.it __
-http://esms24.ir __
-http://smspanel.faraed.com __
-http://www.farapayamak.com __
-http://farazpayam.com __
-http://fayasms.ir __
-http://firstpayamak.ir __
-http://fortytwo.com __
-http://freepayamak.ir __
-http://sms.hostiran.net __
+https://azinweb.com/
+http://arad-sms.ir
+http://ariaideh.com
+http://www.0098sms.com
+http://500sms.ir
+http://adpdigital.com/services
+http://afe.ir
+http://www.afilnet.com
+http://sms.amansoft.ir
+http://www.arkapayamak.ir
+http://asanak.ir
+http://asanak.ir
+http://barzingostar.ir
+http://www.bearsms.com
+http://panelsms.bestit.co
+http://bulutfon.com
+http://caffeweb.com
+http://chapargah.ir
+http://chaparpanel.ir
+http://csmsplus.mobilinkworld.com
+http://sms.dot4all.it
+http://esms24.ir
+http://smspanel.faraed.com
+http://www.farapayamak.com
+http://farazpayam.com
+http://fayasms.ir
+http://firstpayamak.ir
+http://fortytwo.com
+http://freepayamak.ir
+http://sms.hostiran.net
