@@ -19,17 +19,17 @@ composer update
 Once composer is finished, you need to add the service provider. Open ```app/config/app.php```, and add a new item to the providers array.
 
 ```
-'Pamenary\LaravelSms\Laravel\SmsServiceProvider::class',
+Pamenary\LaravelSms\Laravel\SmsServiceProvider::class,
 ```
 
 Next, add a Facade for more convenient usage. In ```app/config/app.php``` add the following line to the aliases array:
 
 ```
-'Sms' => 'Pamenary\LaravelSms\Laravel\Facade\Sms::class',
+'Sms' => Pamenary\LaravelSms\Laravel\Facade\Sms::class,
 ```
 Publish config files:
 ```
-php artisan config:publish livana/sms
+php artisan vendor:publish
 ```
 for change username, password and other configuration change ```app/config/sms.php```
 
