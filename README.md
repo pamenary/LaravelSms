@@ -85,3 +85,4 @@ http://firstpayamak.ir
 http://fortytwo.com
 http://freepayamak.ir
 http://sms.hostiran.net
+http://melipayamak.ir

@@ -221,6 +221,13 @@ return [
 			'password'   => '',
 			'from'       => '',
 		],
+		'melipayamak'   => [
+			'website'    => 'http://melipayamak.ir',
+			'webService' => 'http://melipayamak.ir/post/send.asmx?wsdl',
+			'username'   => '',
+			'password'   => '',
+			'from'       => '',
+		],
 	],
 
 ];
