@@ -37,8 +37,6 @@ Usage
 -----
 ### Send Message
 ```php
-Sms::sendSMS('09136000415', 'text message'); // send message for a person
-
 Sms::sendSMS(['09136000415', '09361265987'], 'text mesage'); // send message for persons
 ```
 ### Change Gateway
