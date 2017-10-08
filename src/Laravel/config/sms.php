@@ -228,6 +228,13 @@ return [
 			'password'   => '',
 			'from'       => '',
 		],
+        'itco'   => [
+            'website'    => 'http://it-co.ir',
+            'webService' => 'http://185.4.28.100/class/sms/webService4/server.php?wsdl',
+            'username'   => '',
+            'password'   => '',
+            'from'       => '',
+        ],
 	],
 
 ];

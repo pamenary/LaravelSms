@@ -117,6 +117,9 @@ abstract class GatewayAbstract implements GatewayInterface {
 			case 'melipayamak':
 				$gateway = new MelipayamakGateway();
 				break;
+			case 'itco':
+				$gateway = new ItcoGateway();
+				break;
 			default:
 				$gateway = new AzinwebGateway();
 				break;
