@@ -17,6 +17,13 @@ return [
 			'password'   => '',
 			'from'       => '',
 		],
+		'bayanegah'      => [
+			'website'    => 'http://bayanegah.com',
+			'webService' => 'http://sms.bayanegah.com/API/send.asmx?WSDL',
+			'username'   => '',
+			'password'   => '',
+			'from'       => '',
+		],
 		'aradsms'       => [
 			'website'    => 'http://arad-sms.ir',
 			'webService' => 'http://panel.arad-sms.ir/post/send.asmx?wsdl',
