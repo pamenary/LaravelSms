@@ -37,14 +37,14 @@ Usage
 -----
 ### Send Message
 ```php
-Sms::sendSMS(['09136000415', '09361265987'], 'text mesage'); // send message for persons
+Sms::sendSMS(['09136000415', '09361265987', '09336505170'], 'text mesage'); // send message for persons
 ```
 ### Change Gateway
 
 ```php
 $sms = new Sms(new \Pamenary\LaravelSms\Gateways\AzinwebGateway());
 
-$sms->sendSMS(['09136000415'], 'text message');
+$sms->sendSMS(['09136000415', '09336505170'], 'text message');
 ```
 
 ### Get Credit
@@ -84,3 +84,4 @@ http://fortytwo.com
 http://freepayamak.ir
 http://sms.hostiran.net
 http://melipayamak.ir
+http://postgah.net
