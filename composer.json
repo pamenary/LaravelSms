@@ -6,6 +6,10 @@
         {
             "name": "ali pamenari",
             "email": "info@azinweb.com"
+        },
+        {
+            "name": "Mohammad Ghanbari",
+            "email": "info@mavin.ir"
         }
     ],
     "minimum-stability": "dev",
