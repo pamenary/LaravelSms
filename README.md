@@ -3,11 +3,11 @@ package for send sms with laravel  (All gatways in Iran)
 
 installation
 ------------
-For install this package Edit your project's ```composer.json``` file to require pamenary/LaravelSms
+For install this package Edit your project's ```composer.json``` file to require mavinoo/LaravelSms
 
 ```php
 "require": {
-  "pamenary/LaravelSms": "dev-master"
+  "mavinoo/LaravelSms": "dev-master"
 },
 ```
 
