@@ -55,7 +55,7 @@ class HostiranGateway extends GatewayAbstract {
 			return 'Blank Username && Password';
 
 		$options = array('login' => $this->username, 'password' => $this->password);
-		$client = new SoapClient($this->webService, $options);
+		$client = new \SoapClient($this->webService, $options);
 
 		try
 		{
