@@ -7,7 +7,7 @@ For install this package Edit your project's ```composer.json``` file to require
 
 ```php
 "require": {
-  "pamenary/LaravelSms": "dev-master"
+  "pamenary/laravel-sms": "dev-master"
 },
 ```
 
@@ -37,19 +37,18 @@ Usage
 -----
 ### Send Message
 ```php
-Sms::sendSMS(['09136000415', '09361265987'], 'text mesage'); // send message for persons
-```
-### Change Gateway
+use Pamenary\LaravelSms\Sms;
 
-```php
-$sms = new Sms(new \Pamenary\LaravelSms\Gateways\AzinwebGateway());
-
-$sms->sendSMS(['09136000415'], 'text message');
+$sms = new Sms();
+$sms->sendSMS(['09123456789'], 'text message');
 ```
 
 ### Get Credit
 ```php
-Sms::getCredit();
+use Pamenary\LaravelSms\Sms;
+
+$sms = new Sms();
+$sms->getCredit();
 ```
 
 ### Gateway
