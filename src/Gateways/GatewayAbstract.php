@@ -24,6 +24,9 @@ abstract class GatewayAbstract implements GatewayInterface {
 	public function initGateway( $defaultGateway ) {
 
 		switch ( $defaultGateway ) {
+			case 'tsms':
+				$gateway = new TsmsGateway();
+				break;				
 			case 'azinweb':
 				$gateway = new AzinwebGateway();
 				break;
