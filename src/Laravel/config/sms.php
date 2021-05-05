@@ -10,6 +10,13 @@ return [
 	'default' => 'azinweb',
 
 	'gateway' => [
+		'tsms'       => [
+		    'website'    => 'http://tsms.ir',
+		    'webService' => 'http://www.tsms.ir/soapWSDL/?wsdl',
+		    'username'   => '',
+		    'password'   => '',
+		    'from'       => '',
+		],		
 		'azinweb'       => [
 			'website'    => 'http://azinweb.com',
 			'webService' => 'http://sms.azin-sms.ir/API/send.asmx?WSDL',
