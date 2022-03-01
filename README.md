@@ -83,3 +83,7 @@ http://fortytwo.com
 http://freepayamak.ir
 http://sms.hostiran.net
 http://melipayamak.ir
+http://www.linepayamak.ir
+http://saharsms.com
+https://negar.armaghan.net
+http://payamakaria.com

@@ -249,6 +249,34 @@ return [
             'password'   => '',
             'from'       => '',
         ],
+		'rahyabpayamgostaran'       => [
+            'website'    => 'http://www.linepayamak.ir',
+            'webService' => 'http://www.linepayamak.ir/Post/Send.asmx?wsdl',
+            'username'   => '',
+            'password'   => '',
+            'from'       => '',
+        ],
+        'saharsms'       => [
+            'website'    => 'http://saharsms.com',
+            'webService' => 'http://saharsms.com/api/DG40ixhDO38Hp3jTeY5bsbjdJFuIrZx4/json/SendVerify',
+            'username'   => '',
+            'password'   => '',
+            'from'       => '',
+        ],
+        'armaghan'       => [
+            'website'    => 'https://negar.armaghan.net',
+            'webService' => 'https://negar.armaghan.net/sms/url_send.html?',
+            'username'   => '',
+            'password'   => '',
+            'from'       => '',
+        ],
+        'payamakaria'       => [
+            'website'    => 'http://payamakaria.com',
+            'webService' => 'http://api.payamak-panel.com/post/send.asmx',
+            'username'   => '',
+            'password'   => '',
+            'from'       => '',
+        ],
 	],
 
 ];
